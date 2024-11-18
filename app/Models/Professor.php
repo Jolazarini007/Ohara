@@ -18,6 +18,7 @@ class Professor extends Authenticatable
         'telefone',
         'rm',
         'dt_nascimento',
+        'codigo_etec',
         'dt_contratacao',
         'endereco',
         'status',

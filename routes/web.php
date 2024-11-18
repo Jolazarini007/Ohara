@@ -27,6 +27,10 @@ Route::get('/aluno/Home', [AlunoController::class, 'showHomeAluno'])->name('home
 
 Route::get('/professor/login', [ProfessorController::class, 'showLoginProfessor'])->name('showLoginProfessor');
 
+Route::post('/professor/login', [ProfessorController::class, 'loginProfessor'])->name('loginProfessor');
+
+Route::get('/professor/Home', [ProfessorController::class, 'showHomeProfessor'])->name('homeProfessor');
+
 Route::get('/', function () { return view('escolhaLogin'); })->name('gestao.login');
 
 require __DIR__.'/auth.php';

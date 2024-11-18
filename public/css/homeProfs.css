@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+main {
+    height: 100vh; /* Define a altura completa da viewport */
+    display: grid;
+    grid-template-rows: repeat(7, 1fr); /* Layout padrão com 7 linhas */
+    grid-template-columns: repeat(5, 1fr); /* Layout padrão com 5 colunas */
+    gap: 15px; /* Espaço entre os itens */
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.dadosAluno {
+    margin: 15px;
+    grid-area: 1 / 1 / span 3 / span 3;
+    box-shadow: 0px 0px 9px rgb(83, 83, 83);
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.dadosAluno .container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 10px;
+}
+
+.dadosAluno .header{
+    height: 70px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    border-bottom: 1px solid;
+    border-radius: 5px;
+}
+
+.dadosAluno .imgAluno {
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dadosAluno .imgAluno {
+    border-radius: 100px;
+    margin: 20px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid black; /* Borda preta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dadosAluno .imgAluno picture {
+    border-radius: 100%;
+    margin: 5px;
+    width: 80%;
+    height: 80%;
+    background-color: transparent; /* Fundo transparente */
+}
+
+.dadosAluno .info{
+    grid-column: 2;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.aulasProf {
+    margin: 15px;
+    grid-area: 4 / 1 / span 4 / span 3;
+    box-shadow: 0px 0px 9px rgb(83, 83, 83);
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+
+.aulasProf .header{
+    height: 80px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.16em;
+    border-bottom: 1px solid;
+    border-radius: 5px;
+}
+
+.aulasProf .aula{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    overflow-y: auto;
+}
+
+p.numSala{
+    float: right;
+    background-color: gray;
+    margin: 10px;
+}
+
+.aulasProf .aulas .aula{
+    height: auto;
+    height: 50%;
+    width: 90%;
+    padding: 10px;
+    margin: 20px;
+
+    box-shadow: 2px 2px 3px rgb(83, 83, 83);
+    border: 2px solid black;
+    border-radius: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: start;
+    
+    font-size: 1.2em;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.calendarioAluno {
+    margin: 15px;
+    grid-area: 1 / 4 / span 2 / span 2;
+    box-shadow: 0px 0px 9px rgb(83, 83, 83);
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.calendarioAluno .header{
+    height: 70px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.16em;
+    border-bottom: 1px solid;
+    border-radius: 5px;
+}
+
+.calendarioAluno .dias{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.calendarioAluno .dias span{
+    box-shadow: 2px 2px 3px rgb(83, 83, 83);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+.msgsProf {
+    margin: 15px;
+    grid-area: 3 / 4 / span 5 / span 3;
+    box-shadow: 0px 0px 9px rgb(83, 83, 83);
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.msgsProf .header{
+    height: 80px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.16em;
+    border-bottom: 1px solid;
+    border-radius: 5px;
+}
+
+.msgsProf .msgs{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.msgsProf .msgs table{
+    padding: 8px;
+    width: 80%;
+    height: fit-content;
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 10px;
+    color: black;
+    border-radius: 30px;
+}
+
+td, tr, th{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 100%; /* Coloca todas as divs em uma única coluna */
+        grid-template-rows: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .dadosAluno,
+    .calendarioAluno,
+    .notificacoesAluno,
+    .tarefasAluno {
+        grid-area: auto; /* Permite que cada item ocupe a próxima linha disponível */
+    }
+    section .etc{
+        padding: 5px;
+    }
+    section p{
+        display: none;
+    }
+    section span{
+        display: none;
+    }
+    section{
+        align-items: center;
+        padding: 0;
+    }
+}

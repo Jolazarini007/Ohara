@@ -8,21 +8,28 @@
 </head>
 <body>
     <main>
-        <div class="container">
+    <div class="container">
             <!-- Título -->
             <div>
-                <h1>Login Professor</h1>
+                <h1>Login Professores</h1>
             </div>
 
             <!-- Formulário de Login -->
             <div class="info">
-                <form method="POST" action="{{ route('login') }}">
+
+                @if ($errors->has('login'))
+                <div class="error">
+                    <p>{{ $errors->first('login') }}</p>
+                </div>
+                @endif
+
+                <form method="POST" action="{{ route('loginProfessor') }}">
                     @csrf
 
                     <!-- RM -->
                     <div>
                         <p>RM</p>
-                        <input type="text" name="rm" value="{{ old('rm') }}" required autofocus>
+                        <input type="number" name="rm" id='email' value="{{ old('rm') }}" required autofocus>
                         @error('rm')
                             <span class="error">{{ $message }}</span>
                         @enderror
@@ -31,17 +38,8 @@
                     <!-- Código Etec -->
                     <div>
                         <p>Código Etec</p>
-                        <input type="text" name="codigo_etec" value="{{ old('codigo_etec') }}" required>
+                        <input type="text" name="codigo_etec" id='codigo_etec' value="{{ old('codigo_etec') }}" required>
                         @error('codigo_etec')
-                            <span class="error">{{ $message }}</span>
-                        @enderror
-                    </div>
-
-                    <!-- Email -->
-                    <div>
-                        <p>Email</p>
-                        <input type="email" name="email" value="{{ old('email') }}" required>
-                        @error('email')
                             <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
@@ -49,8 +47,8 @@
                     <!-- Senha -->
                     <div>
                         <p>Senha</p>
-                        <input type="password" name="password" required>
-                        @error('password')
+                        <input type="password" name="senha" id='senha' required>
+                        @error('senha')
                             <span class="error">{{ $message }}</span>
                         @enderror
                     </div>

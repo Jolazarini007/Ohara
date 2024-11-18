@@ -20,7 +20,7 @@ class AlunoFactory extends Factory
             'rm' => $this->faker->unique()->randomNumber(6, true), // RM com 6 dígitos
             'codigo_etec' => $this->faker->unique()->randomNumber(6, true), // Código Etec com 10 caracteres aleatórios
             'dt_nascimento' => $this->faker->date('Y-m-d', '2010-01-01'),
-            'senha' => bcrypt('aluno'), // Senha padrão criptografada
+            'senha' => bcrypt('aluno123'), // Senha padrão criptografada
             'matricula' => $this->faker->unique()->randomNumber(5),
         ];
     }

@@ -23,7 +23,8 @@ class ProfessorFactory extends Factory
             'endereco' => $this->faker->address,
             'status' => $this->faker->word,
             'salario' => $this->faker->randomFloat(2, 1000, 5000),
-            'senha' => bcrypt('professor'), // Senha padrão criptografada
+            'codigo_etec' => $this->faker->unique()->randomNumber(6, true), // Código Etec com 10 caracteres aleatórios
+            'senha' => bcrypt('professor123'), // Senha padrão criptografada
         ];
     }
 }
