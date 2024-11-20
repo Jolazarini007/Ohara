@@ -29,7 +29,7 @@
                     <!-- RM -->
                     <div>
                         <p>RM</p>
-                        <input type="number" name="rm" id='email' value="{{ old('rm') }}" required autofocus>
+                        <input type="number" name="rm" id='rm' value="{{ old('rm') }}" required autofocus>
                         @error('rm')
                             <span class="error">{{ $message }}</span>
                         @enderror

@@ -2,16 +2,23 @@
 
 namespace App\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable; // Use o trait Authenticatable
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable; // Use o trait Authenticatable
+use Illuminate\Notifications\Notifiable;
 
 class Professor extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     protected $table = 'professores';  // Especificando o nome correto da tabela
 
+    protected $guard = 'professor';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
 
     protected $fillable = [
         'nome',
@@ -24,7 +31,18 @@ class Professor extends Authenticatable
         'status',
         'salario',
         'area_ensino',
-        'senha',
+        'password',
+    ];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    
+    protected $hidden = [
+        'password',
+        'remember_token',
     ];
 
     // Relação de muitos para muitos com Materia, incluindo 'turma_id' na tabela intermediária

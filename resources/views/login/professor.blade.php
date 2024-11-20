@@ -23,13 +23,13 @@
                 </div>
                 @endif
 
-                <form method="POST" action="{{ route('loginProfessor') }}">
+                <form method="POST" action="{{ route('professor.login') }}">
                     @csrf
 
                     <!-- RM -->
                     <div>
                         <p>RM</p>
-                        <input type="number" name="rm" id='email' value="{{ old('rm') }}" required autofocus>
+                        <input type="number" name="rm" id='rm' value="{{ old('rm') }}" required autofocus>
                         @error('rm')
                             <span class="error">{{ $message }}</span>
                         @enderror
@@ -47,7 +47,7 @@
                     <!-- Senha -->
                     <div>
                         <p>Senha</p>
-                        <input type="password" name="senha" id='senha' required>
+                        <input type="password" name="password" id='password' required>
                         @error('senha')
                             <span class="error">{{ $message }}</span>
                         @enderror

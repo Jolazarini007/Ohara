@@ -19,7 +19,7 @@
         <h2>Aluno</h2>
     </div>
     <div >
-        <form action="{{ route('showLoginProfessor') }}" method="GET">
+        <form action="{{ route('professor.login') }}" method="GET">
             <button type='submit' class="professor"></button>
         </form>
         <h2>Professor</h2>

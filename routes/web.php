@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ProfessorController;
 
 /* Route::get('/dash', function () {
     return view('welcome');
@@ -11,9 +10,6 @@ use App\Http\Controllers\ProfessorController;
 Route::get('/', function () { return view('escolhaLogin'); })->name('escolhaLogin');
 Route::get('/', function () { return view('escolhaLogin'); })->name('gestao.login');
 
-Route::get('/professor/login', [ProfessorController::class, 'showLoginProfessor'])->name('showLoginProfessor');
-Route::post('/professor/login', [ProfessorController::class, 'loginProfessor'])->name('loginProfessor');
-Route::get('/professor/Home', [ProfessorController::class, 'showHomeProfessor'])->name('homeProfessor');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -27,3 +23,4 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 require __DIR__.'/aluno-auth.php';
+require __DIR__.'/professor-auth.php';

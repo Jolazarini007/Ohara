@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('endereco');
             $table->string('status');
             $table->integer('codigo_etec'); // Código da etec do aluno
-            $table->string('senha')->nullable(); // Senha do professor
+            $table->string('password')->nullable(); // Senha do professor
             $table->decimal('salario', 8, 2)->nullable(); // Nota da avaliação
             $table->timestamps(); // Created_at e Updated_at
         });

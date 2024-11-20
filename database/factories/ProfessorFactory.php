@@ -24,7 +24,7 @@ class ProfessorFactory extends Factory
             'status' => $this->faker->word,
             'salario' => $this->faker->randomFloat(2, 1000, 5000),
             'codigo_etec' => $this->faker->unique()->randomNumber(6, true), // Código Etec com 10 caracteres aleatórios
-            'senha' => bcrypt('professor123'), // Senha padrão criptografada
+            'password' => bcrypt('professor123'), // Senha padrão criptografada
         ];
     }
 }
