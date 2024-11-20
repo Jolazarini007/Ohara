@@ -20,7 +20,7 @@ class AlunoController extends Controller
         $validated = $request->validate([
             'rm' => 'required|numeric',
             'codigo_etec' => 'required|string',
-            'senha' => 'required|min:6',
+            'password' => 'required|min:6',
         ]);
         
         // Buscar aluno no banco de dados
@@ -32,8 +32,8 @@ class AlunoController extends Controller
             return back()->withErrors(['login' => 'Aluno não encontrado. Verifique as informações e tente novamente.']);
         }
     
-        if (!password_verify($request->senha, $aluno->senha)) {
-            return back()->withErrors(['senha' => 'Senha incorreta.']);
+        if (!password_verify($request->password, $aluno->password)) {
+            return back()->withErrors(['password' => 'Senha incorreta.']);
         }
         // Autenticação manual
         Auth::login($aluno);

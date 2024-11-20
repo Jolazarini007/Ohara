@@ -23,7 +23,7 @@
                 </div>
                 @endif
 
-                <form method="POST" action="{{ route('loginAluno') }}">
+                <form method="POST" action="{{ route('aluno.login') }}">
                     @csrf
 
                     <!-- RM -->
@@ -47,7 +47,7 @@
                     <!-- Senha -->
                     <div>
                         <p>Senha</p>
-                        <input type="password" name="senha" id='senha' required>
+                        <input type="password" name="password" id='password' required>
                         @error('senha')
                             <span class="error">{{ $message }}</span>
                         @enderror

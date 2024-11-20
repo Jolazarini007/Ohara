@@ -13,7 +13,7 @@
 <div class="container">
 
     <div >
-        <form action="{{ route('showLoginAluno') }}" method="GET">
+        <form action="{{ route('aluno.login') }}" method="GET">
             <button type='submit' class="aluno"></button>
         </form>
         <h2>Aluno</h2>

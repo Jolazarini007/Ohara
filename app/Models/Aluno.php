@@ -2,21 +2,39 @@
 
 namespace App\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable; // Use o trait Authenticatable
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable; // Use o trait Authenticatable
+use Illuminate\Notifications\Notifiable;
 
 class Aluno extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
+
+    protected $guard = 'aluno';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
 
     protected $fillable = [
-        'nome',
-        'telefone',
         'rm',
+        'nome',
         'codigo_etec',
         'dt_nascimento',
-        'senha',
+        'telefone',
+        'password',
+    ];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        'password',
+        'remember_token',
     ];
 
     // Relação de muitos para muitos com Responsável
