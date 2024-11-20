@@ -6,7 +6,6 @@ namespace Database\Factories;
  */
 use App\Models\Aluno;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
 class AlunoFactory extends Factory
 {
