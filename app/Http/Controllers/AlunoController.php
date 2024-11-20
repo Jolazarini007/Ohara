@@ -29,17 +29,23 @@ class AlunoController extends Controller
             ->first();
     
         if (!$aluno) {
-            return back()->withErrors(['login' => 'Aluno não encontrado. Verifique as informações e tente novamente.']);
+            return response()->json(['error' => 'Aluno não encontrado. Verifique as informações e tente novamente.'], 404);
         }
     
         if (!password_verify($request->password, $aluno->password)) {
-            return back()->withErrors(['password' => 'Senha incorreta.']);
+            return response()->json(['error' => 'Senha incorreta.'], 401);
         }
+    
         // Autenticação manual
         Auth::login($aluno);
-    
-        return redirect()->route('homeAluno')->with('success', 'Login realizado com sucesso!');
+        
+        // Retorna o aluno em formato JSON
+        return response()->json([
+            'message' => 'Login realizado com sucesso!',
+            'aluno' => $aluno
+        ], 200);
     }
+    
 
     // Logout
     public function logout()
