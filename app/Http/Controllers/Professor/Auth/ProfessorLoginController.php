@@ -24,11 +24,23 @@ class ProfessorLoginController extends Controller
      */
     public function store(ProfessorLoginRequest $request): RedirectResponse
     {
-        $request->authenticate();
 
-        $request->session()->regenerate();
+        // Captura as credenciais de login
+        $credentials = $request->only('rm', 'codigo_etec', 'password');
+        
+        // Tenta autenticar usando o guard 'alunos'
+        if (Auth::guard('professor')->attempt($credentials, $request->boolean('remember'))) {
+            // Regenera a sessão para evitar roubo de sessão
+            $request->session()->regenerate();
 
-        return redirect()->intended(route('professor.home', absolute: false));
+            // Redireciona para a página inicial do aluno
+            return redirect(route('professor.home'));
+        }
+
+        // Retorna erro se as credenciais forem inválidas
+        return back()->withErrors([
+            'rm' => __('auth.failed'),
+        ]);
     }
 
     /**

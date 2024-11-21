@@ -11,7 +11,7 @@ Route::get('/', function () { return view('escolhaLogin'); })->name('escolhaLogi
 Route::get('/', function () { return view('escolhaLogin'); })->name('gestao.login');
 
 
-Route::middleware('auth')->group(function () {
+/* Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -20,7 +20,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
+ */
 require __DIR__.'/auth.php';
-require __DIR__.'/aluno-auth.php';
-require __DIR__.'/professor-auth.php';
+require __DIR__.'/user-auth.php';
