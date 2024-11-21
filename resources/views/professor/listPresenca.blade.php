@@ -90,7 +90,7 @@
             <h2>Aluno</h2>
             <div id="ftChamada"></div>
             <h4>Nome:</h4>
-            <p>Nome completo do aluno</p>
+            <p>Kaua Pereira de Andrade</p>
         </div>
     </main>
 </div>

@@ -73,7 +73,7 @@
                     </div>
                     <div class="info">
                         <h3>Professor:</h3>
-                        <p>Nome completo do Professor</p>
+                        <p>Victor Hugo Aguilar</p>
                     </div>
                 </div>
             </div>
@@ -85,13 +85,13 @@
                     <div class="aula">
                         <h4>Proxima Aula</h4>
                         <p class="numSala">Sala 3</p>
-                        <p>Nome da etec</p>
+                        <p>Etec Juscelino Kubitschek</p>
                     </div>
 
                     <div class="aula">
                         <h4>Proxima Aula</h4>
                         <p class="numSala">Sala 5</p>
-                        <p>Nome da etec</p>
+                        <p>Etec Juscelino Kubitschek</p>
                     </div>
 
                 </div>
@@ -99,7 +99,7 @@
 
             <div class="calendarioAluno">
                 <div class="header">
-                    <h2>Setembro 2024</h2>
+                    <h2>Novembro 2024</h2>
                 </div>
                 <div class="dias">
                     <span>
@@ -147,9 +147,9 @@
 
                         <tbody>
                             <tr>
-                                <td>12/09</td>
-                                <td>Aula tal</td>
-                                <td>Aluno tal</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>

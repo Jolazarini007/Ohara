@@ -91,11 +91,11 @@
                     </div>
                     <div class="info">
                         <h3>Nome:</h3>
-                        <p>Nome completo do Aluno</p>
+                        <p>João Victor Lazarini</p>
                         <h3>Rm:</h3>
-                        <p>?????</p>
+                        <p>13356</p>
                         <h3>Curso</h3>
-                        <p>1º Nome do curso</p>
+                        <p>Desenvolvimento de Sistemas</p>
                     </div>
                 </div>
             </div>
@@ -106,27 +106,27 @@
                 </div>
                 <div class="notificacoes">
                     <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
+                        <h4>Atividade de banco de dados</h4>
+                        <p>Você recebeu uma notificação!</p>
                     </div>
 
                     <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
+                        <h4>Atividade de Desenvolvimento Mobile</h4>
+                        <p>Você recebeu uma notificação!</p>
                     </div>
 
                     <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
+                        <h4>Prévia do TCC</h4>
+                        <p>Você recebeu uma notificação!</p>
                     </div>
 
                     <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
+                        <h4>Entrega de atividade Pendente</h4>
+                        <p>Você recebeu uma notificação!</p>
                     </div>
 
                     <div class="notificacao">
-                        <h4>Titulo notificação</h4>
+                        <h4>Evento do Hopi Hari</h4>
                         <p>Você recebeu uma notificação</p>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
 
             <div class="calendarioAluno">
                 <div class="header">
-                    <h2>Setembro 2024</h2>
+                    <h2>Novembro 2024</h2>
                 </div>
                 <div class="dias">
                     <span>

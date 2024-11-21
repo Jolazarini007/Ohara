@@ -80,22 +80,22 @@
 
             <div id="dados">
                 <h3>Nome:</h3>
-                <p>Aqui vai o nome do aluno</p>
+                <p>João Victor Lazarini</p>
 
                 <h3>RM:</h3>
-                <p>Aqui vai o Rm do aluno</p>
+                <p>13356</p>
 
                 <h3>Curso:</h3>
-                <p>Aqui vai o Curso do aluno</p>
+                <p>Desenvolvimento de Sistemas</p>
 
                 <h3>Módulo/Série:</h3>
-                <p>Aqui vai o Módulo ou série do aluno</p>
+                <p>3º Módulo</p>
 
                 <h3>Turma:</h3>
-                <p>Aqui vai a turma do aluno</p>
+                <p>Manhã</p>
                 
                 <h3>Data de Matrícula:</h3>
-                <p>Aqui vai a data da matricula do aluno</p>
+                <p>20/07/2023</p>
             </div>
             <div id="dadosEsq">
                 <button type="button" id="btConfig"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 572 512" width="24" height="24">
