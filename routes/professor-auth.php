@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+/* use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Professor\Auth\ProfessorLoginController;
 
 Route::prefix('professor')->middleware('guest:professor')->group(function () {
@@ -18,4 +18,4 @@ Route::prefix('professor')->middleware('auth:professor')->group(function () {
     Route::get('/Home', function(){
         return view('professor.home');
     })->name('professor.home');
-});
+}); */

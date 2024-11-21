@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Aluno\Auth\AlunoLoginController;
+/* use App\Http\Controllers\Aluno\Auth\AlunoLoginController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('aluno')->group(function () {
@@ -19,3 +19,4 @@ Route::prefix('aluno')->group(function () {
         })->name('aluno.home');
     });
 });
+ */
