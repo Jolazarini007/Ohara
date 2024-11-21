@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/alunos/home.css') }}">
-    <title>Home</title>
+    <link rel="stylesheet" href="{{ asset('css/alunos/menuLateral.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/alunos/consulDeProtocol.css') }}">
+    <title>Ohara</title>
 </head>
 
 <body>
     <div class="container">
-        <section>
+    <section>
             <span>
                 <h1>Ohara</h1>
             </span>
@@ -85,138 +86,37 @@
 
         <main>
 
-            <div class="dadosAluno">
-                <div class="header">
-                    <h2>Informações do Aluno</h2>
-                </div>
-                <div class="container">
-                    <div class="imgAluno">
-                        <div>
-                            <picture>
-                                <img src="#" alt="">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <h3>Nome:</h3>
-                        <p>Nome completo do Aluno</p>
-                        <h3>Rm:</h3>
-                        <p>?????</p>
-                        <h3>Curso</h3>
-                        <p>1º Nome do curso</p>
-                    </div>
-                </div>
-            </div>
+            <h1>Consulte Seu protocolo</h1>
 
-            <div class="notificacoesAluno">
-                <div class="header">
-                    <h2>Notificações</h2>
+            <form action="#" method="get">
+                <div>
+                    <label for="protoIN">Protocolo:</label> <br>
+                    <input type="number" name="protoIN" id="protoIN" placeholder="Digite seu protocolo" required>
                 </div>
-                <div class="notificacoes">
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
+                <input type="button" value="Consultar" class="btproto">
 
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
+                <div id="res">
+                    Nessa div deve retornar o estado do protocolo
                 </div>
-            </div>
 
-            <div class="calendarioAluno">
-                <div class="header">
-                    <h2>Setembro 2024</h2>
+                <div>
+                    <label for="solIN">Solicitação do Declaração</label> <br>
+                    <select name="solIN" id="solIN" required>
+                        <option value="opcao1">opcao1</option>
+                        <option value="opcao2">opcao2</option>
+                        <option value="opcao3">opcao3</option>
+                    </select>
                 </div>
-                <div class="dias">
-                    <span>
-                        <p>Dom</p>
-                        <p>1</p>
-                    </span>
-                    <span>
-                        <p>Seg</p>
-                        <p>2</p>
-                    </span>
-                    <span>
-                        <p>Ter</p>
-                        <p>3</p>
-                    </span>
-                    <span>
-                        <p>Qua</p>
-                        <p>4</p>
-                    </span>
-                    <span>
-                        <p>Qui</p>
-                        <p>5</p>
-                    </span>
-                    <span>
-                        <p>Sex</p>
-                        <p>6</p>
-                    </span>
-                    <span>
-                        <p>Sab</p>
-                        <p>7</p>
-                    </span>
-                </div>
-            </div>
 
-            <div class="tarefasAluno">
-                <div class="header">
-                    <h2>Tarefas</h2>
+                <div>
+                    <label for="finIN">Para qual finalidade será a declaração?</label> <br>
+                    <input type="text" name="finIN" id="finIN" required maxlength="35">
                 </div>
-                <div class="tarefas">
-                    <div>
-                        <p>01 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>02 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>03 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>04 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>05 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>07 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>08 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>09 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>10 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>11 | PWI3</p>
-                        </span>
-                    </div>
-                </div>
+                <input type="button" value="enviar" class="btproto">
+            </form>
 
         </main>
-
+        
     </div>
 </body>
-
 </html>

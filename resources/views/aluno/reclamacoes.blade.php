@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/alunos/home.css') }}">
-    <title>Home</title>
+    <link rel="stylesheet" href="{{ asset('css/alunos/reclamacoes.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/alunos/menuLateral.css') }}">
+    <title>Reclamações</title>
 </head>
 
 <body>
     <div class="container">
-        <section>
+    <section>
             <span>
                 <h1>Ohara</h1>
             </span>
@@ -82,141 +83,30 @@
 
             </div>
         </section>
-
         <main>
-
-            <div class="dadosAluno">
-                <div class="header">
-                    <h2>Informações do Aluno</h2>
+            
+            <h1>Reclamações</h1>
+    
+            <form action="#" method="post">
+                <div>
+                    <label for="TPrecla">Tipo da reclamação</label><br>
+                    <select name="TPrecla" id="TPrecla" required>
+                        <option value="opcao1">Comportamento</option>
+                        <option value="opcao2">Didática</option>
+                        <option value="opcao3">Professores</option>
+                        <option value="opcao4">Frequência</option>
+                        <option value="opcao5">Outro</option>
+                    </select>
                 </div>
-                <div class="container">
-                    <div class="imgAluno">
-                        <div>
-                            <picture>
-                                <img src="#" alt="">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <h3>Nome:</h3>
-                        <p>Nome completo do Aluno</p>
-                        <h3>Rm:</h3>
-                        <p>?????</p>
-                        <h3>Curso</h3>
-                        <p>1º Nome do curso</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="notificacoesAluno">
-                <div class="header">
-                    <h2>Notificações</h2>
-                </div>
-                <div class="notificacoes">
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="calendarioAluno">
-                <div class="header">
-                    <h2>Setembro 2024</h2>
-                </div>
-                <div class="dias">
-                    <span>
-                        <p>Dom</p>
-                        <p>1</p>
-                    </span>
-                    <span>
-                        <p>Seg</p>
-                        <p>2</p>
-                    </span>
-                    <span>
-                        <p>Ter</p>
-                        <p>3</p>
-                    </span>
-                    <span>
-                        <p>Qua</p>
-                        <p>4</p>
-                    </span>
-                    <span>
-                        <p>Qui</p>
-                        <p>5</p>
-                    </span>
-                    <span>
-                        <p>Sex</p>
-                        <p>6</p>
-                    </span>
-                    <span>
-                        <p>Sab</p>
-                        <p>7</p>
-                    </span>
-                </div>
-            </div>
-
-            <div class="tarefasAluno">
-                <div class="header">
-                    <h2>Tarefas</h2>
-                </div>
-                <div class="tarefas">
-                    <div>
-                        <p>01 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>02 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>03 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>04 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>05 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>07 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>08 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>09 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>10 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>11 | PWI3</p>
-                        </span>
-                    </div>
+    
+                <div>
+                    <label for="txtrecla">Qual a sua reclamação?</label> <br>
+                    <textarea name="txtrecla" id="txtrecla" cols="35" rows="10" placeholder="Eu acho minha nota injusta pois..." required spellcheck="true"></textarea>
                 </div>
 
+                <input type="button" value="Enviar" id="btrecla">
+            </form>
         </main>
-
     </div>
 </body>
-
 </html>

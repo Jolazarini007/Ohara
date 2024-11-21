@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/alunos/home.css') }}">
-    <title>Home</title>
+    <link rel="stylesheet" href="{{ asset('css/alunos/notasFaltas.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/alunos/menuLateral.css') }}">
+    <title>Notas e faltas</title>
 </head>
-
 <body>
     <div class="container">
+        <!-- Menu lateral -->
         <section>
             <span>
                 <h1>Ohara</h1>
@@ -83,140 +83,41 @@
             </div>
         </section>
 
+
         <main>
+            <div class="conteudo">
+                <h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24">
+                    <path fill="currentColor" d="M160 80c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-352zM0 272c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 160c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48L0 272zM368 96l32 0c26.5 0 48 21.5 48 48l0 288c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48z"/>
+                    </svg>
+                    Notas e Faltas
+                </h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Disciplina</th>
+                            <th>Nota</th>
+                            <th>Faltas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Matemática</td>
+                            <td>8.5</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>História</td>
+                            <td>7.0</td>
+                            <td>1</td>
+                        </tr>
+                        <!-- Adicione mais linhas conforme necessário -->
+                    </tbody>
+                </table>
 
-            <div class="dadosAluno">
-                <div class="header">
-                    <h2>Informações do Aluno</h2>
-                </div>
-                <div class="container">
-                    <div class="imgAluno">
-                        <div>
-                            <picture>
-                                <img src="#" alt="">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <h3>Nome:</h3>
-                        <p>Nome completo do Aluno</p>
-                        <h3>Rm:</h3>
-                        <p>?????</p>
-                        <h3>Curso</h3>
-                        <p>1º Nome do curso</p>
-                    </div>
-                </div>
             </div>
-
-            <div class="notificacoesAluno">
-                <div class="header">
-                    <h2>Notificações</h2>
-                </div>
-                <div class="notificacoes">
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-
-                    <div class="notificacao">
-                        <h4>Titulo notificação</h4>
-                        <p>Você recebeu uma notificação</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="calendarioAluno">
-                <div class="header">
-                    <h2>Setembro 2024</h2>
-                </div>
-                <div class="dias">
-                    <span>
-                        <p>Dom</p>
-                        <p>1</p>
-                    </span>
-                    <span>
-                        <p>Seg</p>
-                        <p>2</p>
-                    </span>
-                    <span>
-                        <p>Ter</p>
-                        <p>3</p>
-                    </span>
-                    <span>
-                        <p>Qua</p>
-                        <p>4</p>
-                    </span>
-                    <span>
-                        <p>Qui</p>
-                        <p>5</p>
-                    </span>
-                    <span>
-                        <p>Sex</p>
-                        <p>6</p>
-                    </span>
-                    <span>
-                        <p>Sab</p>
-                        <p>7</p>
-                    </span>
-                </div>
-            </div>
-
-            <div class="tarefasAluno">
-                <div class="header">
-                    <h2>Tarefas</h2>
-                </div>
-                <div class="tarefas">
-                    <div>
-                        <p>01 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>02 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>03 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>04 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>05 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>07 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>08 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>09 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>10 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>11 | PWI3</p>
-                        </span>
-                    </div>
-                </div>
-
+            <p>Há algum engano nas notas ou faltas? Reclame aqui &RightArrow;  <a href="reclamacoes.html">Reclamações</a></p>
         </main>
-
     </div>
 </body>
-
 </html>

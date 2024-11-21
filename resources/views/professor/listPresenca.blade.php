@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/professores/menuLateral.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/professores/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/professores/listPresenca.css') }}">
     <title>Ohara</title>
 </head>
-
 <body>
     <div class="container">
-        <section>
+    <section>
             <span>
                 <h1>Ohara</h1>
             </span>
@@ -69,103 +67,39 @@
                 </form>
             </div>
         </section>
-
+        
         <main>
-
-            <div class="dadosAluno">
-                <div class="container">
-                    <div class="imgAluno">
-                            <picture>
-                                <img src="#" alt="">
-                            </picture>
-                    </div>
-                    <div class="info">
-                        <h3>Professor:</h3>
-                        <p>Nome completo do Professor</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aulasProf">
-                <div class="aulas">
-                  
-
-                    <div class="aula">
-                        <h4>Proxima Aula</h4>
-                        <p class="numSala">Sala 3</p>
-                        <p>Nome da etec</p>
-                    </div>
-
-                    <div class="aula">
-                        <h4>Proxima Aula</h4>
-                        <p class="numSala">Sala 5</p>
-                        <p>Nome da etec</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="calendarioAluno">
-                <div class="header">
-                    <h2>Setembro 2024</h2>
-                </div>
-                <div class="dias">
-                    <span>
-                        <p>Dom</p>
-                        <p>1</p>
-                    </span>
-                    <span>
-                        <p>Seg</p>
-                        <p>2</p>
-                    </span>
-                    <span>
-                        <p>Ter</p>
-                        <p>3</p>
-                    </span>
-                    <span>
-                        <p>Qua</p>
-                        <p>4</p>
-                    </span>
-                    <span>
-                        <p>Qui</p>
-                        <p>5</p>
-                    </span>
-                    <span>
-                        <p>Sex</p>
-                        <p>6</p>
-                    </span>
-                    <span>
-                        <p>Sab</p>
-                        <p>7</p>
-                    </span>
-                </div>
-            </div>
-
-            <div class="msgsProf">
-                <div class="header">
-                    <h3>Você tem 0 mensagens não lidas</h2>
-                </div>
-                <div class="msgs">
-                    <table>
-                        <thead>
-                            <th>Data </th>
-                            <th>Assunto</th>
-                            <th>Remetente</th>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>12/09</td>
-                                <td>Aula tal</td>
-                                <td>Aluno tal</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-        </main>
-
-    </div>
+            <div id="tit">
+            <h1>Lista de presença</h1>
+            <p><strong>Clique duas vezes para inserir a falta</strong></p>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>RM</th>
+                    <th>Nome</th>
+                    <th>Faltas</th>
+                    <th>Frequência do Dia</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td>32133</td>
+                    <td>kaua pereira</td>
+                    <td>3</td>
+                    <td>F</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="infosAluno">
+            <h2>Aluno</h2>
+            <div id="ftChamada"></div>
+            <h4>Nome:</h4>
+            <p>Nome completo do aluno</p>
+        </div>
+    </main>
+</div>
 </body>
-
 </html>
