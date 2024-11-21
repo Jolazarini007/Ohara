@@ -220,6 +220,16 @@ Exemplo:
 
 ---
 
+### **8. `public/css`**
+
+Contém os arquivos de css respectivos das páginas Blade organizadas por perfil. Caso queira mudar o estilo de uma página, é nessa aba que você deve procurar o arquivo css desejado
+
+Exemplo:
+- Um arquivo para a Home dos Alunos.
+- Css para a sidebar das páginas.
+
+---
+
 ## **Como Contribuir**
 
 1. **Faça um fork do repositório.**
