@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/menuLateral.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/professores/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/professores/notas.css') }}">
     <title>Ohara</title>
 </head>
-
 <body>
     <div class="container">
-        <section>
+    <section>
             <span>
                 <h1>Ohara</h1>
             </span>
@@ -59,100 +57,49 @@
 
         <main>
 
-            <div class="dadosAluno">
-                <div class="container">
-                    <div class="imgAluno">
-                            <picture>
-                                <img src="#" alt="">
-                            </picture>
-                    </div>
-                    <div class="info">
-                        <h3>Professor:</h3>
-                        <p>Victor Hugo Aguilar</p>
-                    </div>
-                </div>
+            <div id="tit">
+                <p>&checkmark; - Menção Final;  &bigodot; - Menção Temporária; &bigstar; - Condições Especiais</p>
+                <h2>Clique duas vezes para inserir a nota e classifique</h2>
             </div>
 
-            <div class="aulasProf">
-                <div class="aulas">
-                  
+            <table>
+                <thead>
+                    <th>RM</th>
+                    <th>Nome</th>
+                    <th>1º Trimestre</th>
+                    <th>2º Trimestre</th>
+                    <th>Final</th>
+                </thead>
 
-                    <div class="aula">
-                        <h4>Proxima Aula</h4>
-                        <p class="numSala">Sala 3</p>
-                        <p>Etec Juscelino Kubitschek</p>
-                    </div>
+                <tbody>
+                    <tr>
+                        <td>12345</td>
+                        <td>João Pereira</td>
+                        <td>B &bigstar;</td>
+                        <td>R</td>
+                        <td>B</td>
+                    </tr>
+                </tbody>
+            </table>
 
-                    <div class="aula">
-                        <h4>Proxima Aula</h4>
-                        <p class="numSala">Sala 5</p>
-                        <p>Etec Juscelino Kubitschek</p>
-                    </div>
+            <div id="ltDir">
+                <button type="button" class="botao">Verificar Frequência</button>
 
-                </div>
+                <p id="infosTurma"><strong>Classe</strong><br> <strong>Habilitação:</strong> Técnico em desenvolvimento de Sistemas <br> <strong>Módulo/Série:</strong> 3º Módulo <br> <strong>Componente:</strong> Desenvolvimento de Sistemas <br> <strong>Bimestre/Trimestre:</strong> 2 Trimestre</p>
+
+                <button type="button" class="botao">Adicionar avaliação</button>
+
+                <select name="selcAluno" id="selecAluno">
+                    <option value="al1">João</option>
+                </select>
+
+                <textarea name="avlAl" id="avlAl" cols="15" rows="3" placeholder="Insira a avaliação"></textarea>
+
+                <button type="button" class="botao"> Enviar</button>
             </div>
-
-            <div class="calendarioAluno">
-                <div class="header">
-                    <h2>Novembro 2024</h2>
-                </div>
-                <div class="dias">
-                    <span>
-                        <p>Dom</p>
-                        <p>1</p>
-                    </span>
-                    <span>
-                        <p>Seg</p>
-                        <p>2</p>
-                    </span>
-                    <span>
-                        <p>Ter</p>
-                        <p>3</p>
-                    </span>
-                    <span>
-                        <p>Qua</p>
-                        <p>4</p>
-                    </span>
-                    <span>
-                        <p>Qui</p>
-                        <p>5</p>
-                    </span>
-                    <span>
-                        <p>Sex</p>
-                        <p>6</p>
-                    </span>
-                    <span>
-                        <p>Sab</p>
-                        <p>7</p>
-                    </span>
-                </div>
-            </div>
-
-            <div class="msgsProf">
-                <div class="header">
-                    <h3>Você tem 0 mensagens não lidas</h2>
-                </div>
-                <div class="msgs">
-                    <table>
-                        <thead>
-                            <th>Data </th>
-                            <th>Assunto</th>
-                            <th>Remetente</th>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
+            
         </main>
 
     </div>
 </body>
-
 </html>

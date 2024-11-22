@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    height: 100vh; /* Define a altura completa da viewport */
+    overflow-y: auto;
+    overflow-x:hidden;
+    display: grid;
+    grid-template: repeat(10, 10%) / repeat(10, 10%);
+    padding: 15px;
+}
+
+div#tit{
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 2;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+table{
+    font-size: 1.1em;
+    font-weight: 500;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 10px;
+    border-collapse: collapse;
+    height: fit-content;
+    grid-column: 1 / span 6;
+    grid-row: 3 / span 6;
+}
+
+th, td, tr{
+    border: 2px solid black;
+    text-align: center;
+    padding: 5px;
+    font-weight: 300;
+}
+
+div#ltDir{
+    grid-row: 1 / span 10;
+    grid-column: 8 / span 3;
+    box-shadow: 0px 2px 6px black;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+p#infosTurma{
+    padding: 8px;
+}
+
+select#selecAluno{
+    height: 50px;
+    width: 90%;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+textarea#avlAl{
+    padding: 5px;
+    margin: 5px ;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1.2em;
+    resize: none;
+}
+
+.botao{
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 10px;
+    width: 90%;
+    height: 8%;
+    font-size: 1.2em;
+}
+
+.botao:hover{
+    background-color: whitesmoke;
+    color: black;
+    transition: 1s;
+    border: 2px solid black;
+
+}

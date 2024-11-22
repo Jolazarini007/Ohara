@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/alunos/notasFaltas.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/menuLateral.css') }}">
-    <title>Notas e faltas</title>
+    <link rel="stylesheet" href="{{ asset('css/alunos/suporte.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/menuLateral.css')}}">
+    <title>Ohara</title>
 </head>
 <body>
     <div class="container">
-        <!-- Menu lateral -->
-        <section>
+    <section>
             <span>
                 <h1>Ohara</h1>
             </span>
@@ -74,41 +73,42 @@
 
             </div>
         </section>
-
-
         <main>
-            <div class="conteudo">
-                <h1>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24">
-                    <path fill="currentColor" d="M160 80c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-352zM0 272c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 160c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48L0 272zM368 96l32 0c26.5 0 48 21.5 48 48l0 288c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48z"/>
-                    </svg>
-                    Notas e Faltas
-                </h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Disciplina</th>
-                            <th>Nota</th>
-                            <th>Faltas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Matemática</td>
-                            <td>8.5</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>História</td>
-                            <td>7.0</td>
-                            <td>1</td>
-                        </tr>
-                        <!-- Adicione mais linhas conforme necessário -->
-                    </tbody>
-                </table>
+            
+            <h1>Suporte</h1>
 
-            </div>
-            <p>Há algum engano nas notas ou faltas? Reclame aqui &RightArrow;  <a href="reclamacoes.html">Reclamações</a></p>
+            <form action="post" id="formDuv">
+
+                <div id="dvNm">
+                    <label for="nmSupo">Nome:</label> <br>
+                    <input type="text" name="nmSupo" id="nmSupo" maxlength="20" minlength="5" required placeholder="digite seu primeiro nome">
+                </div>
+
+
+                <div id="dvSlc">
+                    <label for="slcSupo">Qual seu Curso?</label><br>
+                    <select name="slcSupo" id="slcSupo">
+                        <option value="cur1">DS</option>
+                        <option value="cur2">ADM</option>
+                        <option value="cur3">Logística</option>
+                    </select>
+                </div>
+
+
+                <div id="dvRm">
+                    <label for="rmSupo">RM:</label><br>
+                    <input type="number" name="rmSupo" id="rmSupo">
+                </div>
+
+
+                <div id="dvDuv">
+                    <label for="duvSupo">Qual a sua Dúvida?</label><br>
+                    <textarea name="duvSupo" id="duvSupo" cols="30" rows="7"></textarea>
+                </div>
+            </form>
+
+            <button type="button" class="botao" id="btEnv" form="formDuv">Enviar</button>
+            <button type="button" class="botao" id="btVolta">Voltar</button>
         </main>
     </div>
 </body>

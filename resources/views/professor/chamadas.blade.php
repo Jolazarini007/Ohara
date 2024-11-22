@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/menuLateral.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/professores/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/professores/chamadas.css') }}">
     <title>Ohara</title>
 </head>
-
 <body>
     <div class="container">
-        <section>
+    <section>
             <span>
                 <h1>Ohara</h1>
             </span>
@@ -26,7 +24,7 @@
                 </a>
 
                 </a>
-                <a href="{{ route('professor.presenca') }}">
+                <a href="{{ route('professor.chamadas') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24">
                         <path fill="currentColor"
                             d="M160 80c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-352zM0 272c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 160c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48L0 272zM368 96l32 0c26.5 0 48 21.5 48 48l0 288c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48z" />
@@ -59,100 +57,59 @@
 
         <main>
 
-            <div class="dadosAluno">
-                <div class="container">
-                    <div class="imgAluno">
-                            <picture>
-                                <img src="#" alt="">
-                            </picture>
-                    </div>
-                    <div class="info">
-                        <h3>Professor:</h3>
-                        <p>Victor Hugo Aguilar</p>
-                    </div>
-                </div>
+            <div id="titUp">
+                <p><strong>Clique duas vezes para ter acesso a lista de classe</strong></p>
             </div>
 
-            <div class="aulasProf">
-                <div class="aulas">
-                  
-
-                    <div class="aula">
-                        <h4>Proxima Aula</h4>
-                        <p class="numSala">Sala 3</p>
-                        <p>Etec Juscelino Kubitschek</p>
-                    </div>
-
-                    <div class="aula">
-                        <h4>Proxima Aula</h4>
-                        <p class="numSala">Sala 5</p>
-                        <p>Etec Juscelino Kubitschek</p>
-                    </div>
-
-                </div>
+            <div id="tblUp">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Habilitação</th>
+                            <th>Módulo/Série</th>
+                            <th>Componentes</th>
+                            <th>Aulas Previstas</th>
+                            <th>Aulas Dadas</th>
+                            <th>Suas Faltas</th>
+                            <th>Reposições Pendentes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Técnico em DS</td>
+                            <td>3º Módulo</td>
+                            <td>Programção Web</td>
+                            <td>70</td>
+                            <td>69</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <div class="calendarioAluno">
-                <div class="header">
-                    <h2>Novembro 2024</h2>
-                </div>
-                <div class="dias">
-                    <span>
-                        <p>Dom</p>
-                        <p>1</p>
-                    </span>
-                    <span>
-                        <p>Seg</p>
-                        <p>2</p>
-                    </span>
-                    <span>
-                        <p>Ter</p>
-                        <p>3</p>
-                    </span>
-                    <span>
-                        <p>Qua</p>
-                        <p>4</p>
-                    </span>
-                    <span>
-                        <p>Qui</p>
-                        <p>5</p>
-                    </span>
-                    <span>
-                        <p>Sex</p>
-                        <p>6</p>
-                    </span>
-                    <span>
-                        <p>Sab</p>
-                        <p>7</p>
-                    </span>
-                </div>
+            <div id="titBottom">
+                <p><strong>Reposições Agendadas - Clique duas vezes para ter acesso a lista de presença</strong></p>
             </div>
 
-            <div class="msgsProf">
-                <div class="header">
-                    <h3>Você tem 0 mensagens não lidas</h2>
-                </div>
-                <div class="msgs">
-                    <table>
-                        <thead>
-                            <th>Data </th>
-                            <th>Assunto</th>
-                            <th>Remetente</th>
-                        </thead>
+            <div id="tblBottom">
+                <table>
+                    <thead>
+                        <th>Habilitação</th>
+                        <th>Módulo/Série</th>
+                        <th>Componente</th>
+                        <th>Qtd. de Aulas</th>
+                    </thead>
+                    <tbody>
+                        <!-- Aqui vão aparecer os dados da reposição -->
+                    </tbody>
+                </table>
+                <strong>Você tem 0 aulas pendentes</strong> 
+            </div>
 
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
+           
         </main>
 
     </div>
 </body>
-
 </html>

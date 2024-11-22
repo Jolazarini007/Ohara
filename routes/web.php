@@ -19,6 +19,8 @@ Route::prefix('professor')->middleware([RedirectIfAuthenticated::class.':profess
 Route::prefix('professor')->middleware([CustomAuthenticate::class.':professor'])->group(function () {
     Route::post('logout', [ProfessorLoginController::class, 'destroy'])->name('professor.logout');
     Route::get('home', fn() => view('professor.home'))->name('professor.home');
+    Route::get('notas', fn() => view('professor.notas'))->name('professor.notas');
+    Route::get('suporte', fn() => view('professor.suporte'))->name('professor.suporte');
     Route::get('presenca', fn() => view('professor.listPresenca'))->name('professor.presenca');
 });
 
@@ -32,12 +34,17 @@ Route::prefix('aluno')->middleware([CustomAuthenticate::class.':aluno'])->group(
     Route::post('logout', [AlunoLoginController::class, 'destroy'])->name('aluno.logout');
     Route::get('Home', fn() => view('aluno.home'))->name('aluno.home');
     Route::get('dados', fn() => view('aluno.dadosAluno'))->name('aluno.dados');
+    Route::get('atividades', fn() => view('aluno.atividades'))->name('aluno.atividades');
     Route::get('notas-e-faltas', fn() => view('aluno.notasFaltas'))->name('aluno.notas');
     Route::get('boletim', fn() => view('aluno.home'))->name('aluno.boletim');
-    Route::get('atividades', fn() => view('aluno.home'))->name('aluno.atividades');
     Route::get('declaracoes', fn() => view('aluno.reclamacoes'))->name('aluno.reclamacoes');
     Route::get('consulta', fn() => view('aluno.consulDeProtocol'))->name('aluno.consulta');
+    Route::get('suporte', fn() => view('aluno.suporte'))->name('aluno.suporte');
+    Route::get('suporte2', fn() => view('aluno.suporte2'))->name('aluno.suporte2');
 });
+
+
+
 
 
 require __DIR__.'/auth.php';

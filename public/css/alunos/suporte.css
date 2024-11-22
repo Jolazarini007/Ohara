@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(235, 235, 235);
+    
+}
+
+main {
+    height: 100vh; /* Define a altura completa da viewport */
+    overflow-y: auto;
+    overflow-x:hidden;
+    display: grid;
+    grid-template: repeat(10, 10%) / repeat(10, 10%);
+    padding: 10px;
+}
+
+main > h1{
+    grid-row: 1 / span 2;
+    grid-column: 4 / span 2;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+main > div{
+    display: grid;
+    grid-template: repeat(5, 20%) / repeat(5, 20%);
+    padding: 10px;
+}
+
+main > div > h2{
+    grid-row: 1 / span 1;
+    grid-column: 1 / 1;
+    font-size: 1.7em;
+}
+
+p.desc{
+    background-color: rgb(180, 180, 180);
+    font-weight: 300;
+    font-size: 1.1em;
+    padding: 5px;
+    margin: 5px;
+    width: fit-content;
+    
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 2;
+}
+
+p.exDuv{
+    font-weight: 500;
+    font-size: 1.2em;
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 3;
+}
+
+a.VM{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    font-weight: 500;
+    grid-column: 5 / span 2;
+    grid-row: 1 / span 2;
+}
+
+a.VM:hover{
+    text-decoration: underline;
+    font-weight: 800;
+    font-size: 1.4em;
+}
+
+.botao{
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 10px;
+    width: 90%;
+    height: 30%;
+    font-size: 1.2em;
+}
+
+.botao:hover{
+    background-color: whitesmoke;
+    color: black;
+    transition: 1s;
+    border: 2px solid black;
+}
+
+#btUp{
+    grid-row: 1 / span 3;
+    grid-column: 9 / span 2;
+    font-size: 1.1em;
+}
+
+div.quad{
+    border: 2px solid black;
+    width: 50vw;
+    margin: 30px;
+}
+
+div#acessos{
+    grid-column: 2 / span 7;
+    grid-row: 2 / span 3;
+}
+
+div#contato{
+    grid-column: 2 / span 7;
+    grid-row: 5 / span 3;
+
+}
+
+div#suporte{
+    grid-column: 2 / span 7;
+    grid-row: 8 / span 3;
+}
+
+#btDown{
+    grid-row: 10 / span 2;
+    grid-column: 9 / span 2; 
+    height: 90%;
+    
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style da segunda parte de suporte */
+
+
+form{
+    grid-row: 2 / span 9;
+    grid-column: 2 / span 9;
+    display: grid;
+    grid-template: repeat(20, 5%) / repeat(20, 5%);
+}
+
+label{
+    font-size: 1.4em;
+    font-weight: 500;
+    
+}
+
+div#dvNm{
+    grid-row: 1 / span 4;
+    grid-column: 2 / span 4;
+}
+
+div#dvSlc{
+    grid-row: 1 / span 4;
+    grid-column: 10 / span 5;
+    
+    
+}
+
+div#dvRm{
+    grid-row: 4 / span 4;
+    grid-column: 4 / span 4;
+    margin: 10px;
+}
+
+div#dvDuv{
+    grid-row: 8 / span 9;
+    grid-column: 2 / span 6;
+}
+
+form > div > select{
+    font-size: 1.3em;
+    text-align: center;
+    width: 80%;
+    padding: 5px;
+    margin: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+input#nmSupo, input#rmSupo{
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+textarea#duvSupo{
+    padding: 5px;
+    margin: 5px ;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1.2em;
+    resize: none;
+}
+
+#btEnv{
+    grid-row: 10 / span 2;
+    grid-column: 4 / span 2;
+    height: 90%;
+}
+
+#btVolta{
+    grid-row: 10 / span 2;
+    grid-column: 9 / span 2;
+    height: 90%;
+}
