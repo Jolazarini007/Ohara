@@ -25,7 +25,7 @@
         <h2>Professor</h2>
     </div>
     <div >
-        <form action="{{ route('login') }}" method="GET">
+        <form action="{{ route('gestao.login') }}" method="GET">
             <button type='submit' class="gestao"></button>
         </form>
         <h2>Gestão</h2>

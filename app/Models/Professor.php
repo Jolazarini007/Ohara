@@ -31,6 +31,7 @@ class Professor extends Authenticatable
         'status',
         'salario',
         'area_ensino',
+        'foto',
         'password',
     ];
 

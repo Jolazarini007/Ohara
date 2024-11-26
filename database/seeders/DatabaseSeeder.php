@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             TurmaSeeder::class,
             SemestreSeeder::class,
             AnoLetivoSeeder::class,
+            GestorSeeder::class,
         ]);
     }
 }

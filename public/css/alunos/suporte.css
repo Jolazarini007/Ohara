@@ -18,9 +18,11 @@ main {
     height: 100vh; /* Define a altura completa da viewport */
     overflow-y: auto;
     overflow-x:hidden;
-    display: grid;
-    grid-template: repeat(10, 10%) / repeat(10, 10%);
+    display: flex;
     padding: 10px;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 main > h1{
@@ -77,12 +79,13 @@ a.VM:hover{
 }
 
 .botao{
+    padding: 2vw 8vw;
     background-color: black;
     color: whitesmoke;
     border-radius: 10px;
-    width: 90%;
-    height: 30%;
     font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .botao:hover{
@@ -120,17 +123,10 @@ div#suporte{
     grid-row: 8 / span 3;
 }
 
-#btDown{
-    grid-row: 10 / span 2;
-    grid-column: 9 / span 2; 
-    height: 90%;
-    
-}
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style da segunda parte de suporte */
 
 
-form{
+main form{
     grid-row: 2 / span 9;
     grid-column: 2 / span 9;
     display: grid;
@@ -150,7 +146,7 @@ div#dvNm{
 
 div#dvSlc{
     grid-row: 1 / span 4;
-    grid-column: 10 / span 5;
+    grid-column: 13 / span 5;
     
     
 }
@@ -205,4 +201,11 @@ textarea#duvSupo{
     grid-row: 10 / span 2;
     grid-column: 9 / span 2;
     height: 90%;
+}
+
+.botoes{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
 }

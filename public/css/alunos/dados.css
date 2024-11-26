@@ -25,7 +25,7 @@ main {
 
 div#dados{
     padding: 5px;
-    margin: 5px;
+    margin: 25px;
     font-size: 1.3em;
     height: 70%;
     width: 60%;
@@ -33,23 +33,29 @@ div#dados{
     flex-flow: column nowrap;
     justify-content: space-between;
 }
+div#dados > div{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between
+}
 
 main > h1{
     font-size: 2.5em;
 }
 
-div#dados > h3{
+div#dados > div > h3{
     font-weight: 500;
     margin: 8px; 
 }
 
-div#dados > p{
+div#dados > div > p{
     font-weight: 300;
+    margin: 10px 35px;
 }
 
 div#dadosEsq{
     padding: 10px;
-    margin: 10px;
+    margin: 80px 10px;
     box-shadow: 0px 3px 6px black;
     border-radius: 15px;
     height: 70%;
@@ -57,11 +63,12 @@ div#dadosEsq{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 button#btConfig{
     margin: 10px;
-    padding: 5px;
+    padding: 5px 15px;
     text-align: center;
     background-color: black;
     color: whitesmoke;
@@ -69,6 +76,7 @@ button#btConfig{
     width: 90%;
     height: 15%;
     font-size: 1.1em;
+    cursor: pointer;
 }
 
 button#btConfig > svg{
@@ -92,6 +100,13 @@ div#ftAluno{
     margin: 10px auto 10px auto;
 }
 
+div#ftAluno img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 button#btFt{
     margin: 10px;
     padding: 5px;
@@ -102,6 +117,7 @@ button#btFt{
     width: 90%;
     height: 15%;
     font-size: 1.1em;
+    cursor: pointer;
 }
 
 button#btFt:hover{

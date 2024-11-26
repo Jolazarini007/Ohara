@@ -13,12 +13,26 @@ class AlunoFactory extends Factory
 
     public function definition()
     {
+        // Caminho para a imagem fixa
+        $defaultImagePath = public_path('images/default.jpg');
+
+        // Certifique-se de que o arquivo existe
+        if (!file_exists($defaultImagePath)) {
+            throw new \Exception('Imagem padrão não encontrada em: ' . $defaultImagePath);
+        }
+        $imageBlob = file_get_contents($defaultImagePath);
+
+        // Leia o conteúdo binário da imagem
         return [
-            'nome' => $this->faker->name(),
-            'telefone' => $this->faker->phoneNumber(),
             'rm' => $this->faker->unique()->randomNumber(6, true), // RM com 6 dígitos
             'codigo_etec' => $this->faker->unique()->randomNumber(6, true), // Código Etec com 10 caracteres aleatórios
+            'nome' => $this->faker->name(),
+            'telefone' => $this->faker->phoneNumber(),
             'dt_nascimento' => $this->faker->date('Y-m-d', '2010-01-01'),
+            'curso' => $this->faker->word,
+            'modulo' => $this->faker->word,
+            'turma' => $this->faker->word,
+            'foto' => $imageBlob,
             'password' => bcrypt('aluno123'), // Senha padrão criptografada
         ];
     }

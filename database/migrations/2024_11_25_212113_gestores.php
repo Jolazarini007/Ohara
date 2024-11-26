@@ -6,28 +6,33 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    public function up()
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
     {
-        Schema::create('professores', function (Blueprint $table) {
+        Schema::create('gestores', function (Blueprint $table) {
             $table->id(); // ID principal
+            $table->string('rg');
+            $table->string('cpf');
             $table->integer('rm');
-            $table->integer('codigo_etec'); // Código da etec do professor
-            $table->string('nome'); // Nome do professor
+            $table->integer('codigo_etec'); // Código da etec do gestor
+            $table->string('nome'); // Nome do gestor
             $table->string('telefone')->nullable(); // Telefone
-            $table->string('area_ensino')->nullable(); // Área de ensino
             $table->date('dt_nascimento'); // Data de nascimento
             $table->string('endereco');
-            $table->string('status');
-            $table->decimal('salario', 8, 2)->nullable(); // Salário do professor
-            $table->string('password')->nullable(); // Senha do professor
+            $table->string('password')->nullable(); // Senha do gestor
             $table->binary('foto')->nullable();
 
             $table->timestamps(); // Created_at e Updated_at
         });
     }
 
-    public function down()
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
     {
-        Schema::dropIfExists('professores');
+        Schema::dropIfExists('gestores');
     }
 };

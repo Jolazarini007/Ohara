@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable; // Use o trait Authenticatable
 use Illuminate\Notifications\Notifiable;
 
-class Aluno extends Authenticatable
+class Gestor extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    protected $guard = 'aluno';
+    protected $table = 'gestores';  // Especificando o nome correto da tabela
+
+    protected $guard = 'gestor';
 
     /**
      * The attributes that are mass assignable.
@@ -21,12 +23,12 @@ class Aluno extends Authenticatable
     protected $fillable = [
         'rm',
         'codigo_etec',
+        'rg',
+        'cpf',
         'nome',
         'telefone',
         'dt_nascimento',
-        'curso',
-        'modulo',
-        'turma',
+        'endereco',
         'password',
         'foto'
     ];
@@ -42,15 +44,4 @@ class Aluno extends Authenticatable
         'remember_token',
     ];
 
-    // Relação de muitos para muitos com Responsável
-    public function responsaveis()
-    {
-        return $this->belongsToMany(Responsavel::class, 'responsavel_aluno');
-    }
-
-    // Relação de muitos para muitos com Turma
-    public function turmas()
-    {
-        return $this->belongsToMany(Turma::class, 'aluno_turma');
-    }
 }
