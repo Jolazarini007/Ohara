@@ -28,9 +28,7 @@ class Professor extends Authenticatable
         'codigo_etec',
         'dt_contratacao',
         'endereco',
-        'status',
         'salario',
-        'area_ensino',
         'foto',
         'password',
     ];
@@ -40,7 +38,7 @@ class Professor extends Authenticatable
      *
      * @var array<int, string>
      */
-    
+
     protected $hidden = [
         'password',
         'remember_token',
@@ -49,13 +47,17 @@ class Professor extends Authenticatable
     // Relação de muitos para muitos com Materia, incluindo 'turma_id' na tabela intermediária
     public function materias()
     {
-        return $this->belongsToMany(Materia::class, 'professor_materia', 'professor_id', 'materia_id')
-                    ->withPivot('turma_id');  // Incluindo 'turma_id' como um campo adicional
+        return $this->belongsToMany(Materia::class, 'professor_materia', 'professor_id', 'materia_id');
     }
 
     // Relação de muitos para muitos com Turma
     public function turmas()
     {
         return $this->belongsToMany(Turma::class, 'professor_turma');
+    }
+
+    public function tarefas()
+    {
+        return $this->hasMany(Tarefa::class);
     }
 }

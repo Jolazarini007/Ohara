@@ -24,9 +24,9 @@ class Aluno extends Authenticatable
         'nome',
         'telefone',
         'dt_nascimento',
-        'curso',
+/*         'curso',
         'modulo',
-        'turma',
+        'turma', */
         'password',
         'foto'
     ];
@@ -51,6 +51,10 @@ class Aluno extends Authenticatable
     // Relação de muitos para muitos com Turma
     public function turmas()
     {
-        return $this->belongsToMany(Turma::class, 'aluno_turma');
+        return $this->belongsToMany(Turma::class, 'aluno_turma', 'aluno_id', 'turma_id');
+    }
+
+    public function presencas(){
+        return $this->hasMany(Presenca::class);
     }
 }

@@ -12,7 +12,6 @@ return new class extends Migration
             $table->id(); // ID principal
             $table->foreignId('professor_id')->constrained('professores')->onDelete('cascade'); // FK para professores
             $table->foreignId('materia_id')->constrained('materias')->onDelete('cascade'); // FK para matérias
-            $table->foreignId('turma_id')->constrained('turmas')->onDelete('cascade'); // FK para turmas
             $table->timestamps(); // Created_at e Updated_at
         });
     }

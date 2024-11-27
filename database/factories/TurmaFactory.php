@@ -14,10 +14,11 @@ class TurmaFactory extends Factory
     public function definition()
     {
         return [
-            'curso_id' => \App\Models\Curso::factory(),
+/*             'curso_id' => \App\Models\Curso::factory(),
             'periodo_id' => \App\Models\Periodo::factory(),
-            'nome' => $this->faker->word,
+ */         'nome' => $this->faker->word,
             'descricao' => $this->faker->sentence,
+            'tipo' => $this->faker->randomElement(['Ensino médio', 'Curso Técnico']),
         ];
     }
 }

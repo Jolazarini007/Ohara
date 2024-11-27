@@ -15,9 +15,9 @@ return new class extends Migration
             $table->string('nome'); // Nome do aluno
             $table->string('telefone')->nullable(); // Telefone
             $table->date('dt_nascimento'); // Data de nascimento
-            $table->string('curso'); // Curso do aluno
+/*             $table->string('curso'); // Curso do aluno
             $table->string('modulo'); // Módulo do aluno
-            $table->string('turma'); // Turma do aluno
+            $table->string('turma'); // Turma do aluno */
             $table->binary('foto')->nullable();
             $table->string('password'); // Senha do aluno
             $table->timestamps(); // Created_at e Updated_at

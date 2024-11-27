@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             SemestreSeeder::class,
             AnoLetivoSeeder::class,
             GestorSeeder::class,
+            TesteRelacionamentosSeeder::class,
         ]);
     }
 }

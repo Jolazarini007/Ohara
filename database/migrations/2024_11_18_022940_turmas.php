@@ -10,10 +10,9 @@ return new class extends Migration
     {
         Schema::create('turmas', function (Blueprint $table) {
             $table->id(); // ID principal
-            $table->foreignId('periodo_id')->constrained('periodos')->onDelete('cascade'); // FK para períodos
-            $table->foreignId('curso_id')->constrained('cursos')->onDelete('cascade'); // FK para cursos
             $table->string('nome'); // Nome da turma
             $table->string('descricao')->nullable(); // Descrição da turma
+            $table->enum('tipo', ['Ensino médio', 'Curso Técnico']); // 'Ensino Médio' ou 'Curso Técnico'
             $table->timestamps(); // Created_at e Updated_at
         });
     }

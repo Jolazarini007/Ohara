@@ -21,8 +21,8 @@ class Materia extends Model
     }
 
     // Relação de muitos para muitos com Turma
-    public function turmas()
+    public function turmaMaterias()
     {
-        return $this->belongsToMany(Turma::class, 'materia_turma');
+        return $this->hasMany(TurmaMateria::class);
     }
 }

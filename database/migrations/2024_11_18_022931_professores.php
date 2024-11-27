@@ -14,10 +14,8 @@ return new class extends Migration
             $table->integer('codigo_etec'); // Código da etec do professor
             $table->string('nome'); // Nome do professor
             $table->string('telefone')->nullable(); // Telefone
-            $table->string('area_ensino')->nullable(); // Área de ensino
             $table->date('dt_nascimento'); // Data de nascimento
             $table->string('endereco');
-            $table->string('status');
             $table->decimal('salario', 8, 2)->nullable(); // Salário do professor
             $table->string('password')->nullable(); // Senha do professor
             $table->binary('foto')->nullable();
