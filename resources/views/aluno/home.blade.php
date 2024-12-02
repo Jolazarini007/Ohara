@@ -11,8 +11,8 @@
 
 <body>
     <div class="container">
-        
-    @include('aluno.layouts.sidebar')
+
+        @include('aluno.layouts.sidebar')
 
         <main>
 
@@ -23,7 +23,7 @@
                 <div class="container">
                     <div class="imgAluno">
                         <div class='frame'>
-                            <img src="data:image/jpeg;base64,{{ base64_encode($aluno->foto) }}" alt="Imagem não encontrada">                
+                            <img src="data:image/jpeg;base64,{{ base64_encode($aluno->foto) }}" alt="Imagem não encontrada">
                         </div>
                     </div>
                     <div class="info">
@@ -31,8 +31,10 @@
                         <p>{{ $aluno->nome }}</p>
                         <h3>Rm:</h3>
                         <p>{{ $aluno->rm }}</p>
-                        <h3>Curso</h3>
-                        <p>{{ $aluno->curso }}</p>
+                        <h3>Turmas:</h3>
+                        @foreach($aluno->turmas as $turma)
+                        <p>{{ $turma->nome }}</p>
+                        @endforeach
                     </div>
                 </div>
             </div>

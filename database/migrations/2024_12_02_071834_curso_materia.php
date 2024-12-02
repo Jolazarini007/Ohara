@@ -11,17 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tarefas', function (Blueprint $table) {
+        Schema::create('curso_materia', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->text('descricao');
-            $table->date('data_entrega');
-            $table->foreignId('turma_id')->constrained('turmas')->onDelete('cascade');
-            $table->foreignId('professor_id')->constrained('professores')->onDelete('cascade'); // Relaciona o professor que criou
+            $table->foreignId('curso_id')->constrained('cursos')->onDelete('cascade');
             $table->foreignId('materia_id')->constrained('materias')->onDelete('cascade');
             $table->timestamps();
         });
-        
     }
 
     /**
@@ -29,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tarefas');
+        Schema::dropIfExists('curso_materia');
     }
 };

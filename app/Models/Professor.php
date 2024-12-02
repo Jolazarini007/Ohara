@@ -53,7 +53,7 @@ class Professor extends Authenticatable
     // Relação de muitos para muitos com Turma
     public function turmas()
     {
-        return $this->belongsToMany(Turma::class, 'professor_turma');
+        return $this->belongsToMany(Turma::class, 'professor_turma', 'professor_id', 'turma_id');
     }
 
     public function tarefas()

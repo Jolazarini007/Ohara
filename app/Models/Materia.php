@@ -12,6 +12,7 @@ class Materia extends Model
     protected $fillable = [
         'nome',
         'descricao',
+        'curso_id'
     ];
 
     // Relação de muitos para muitos com Professor
@@ -20,9 +21,19 @@ class Materia extends Model
         return $this->belongsToMany(Professor::class, 'professor_materia', 'materia_id', 'professor_id');
     }
 
-    // Relação de muitos para muitos com Turma
-    public function turmaMaterias()
+    // Relação de muitos para muitos com Professor
+    public function curso()
     {
-        return $this->hasMany(TurmaMateria::class);
+        return $this->belongsTo(Curso::class);
+    }
+    
+    public function turmas()
+    {
+        return $this->belongsToMany(Turma::class, 'turma_materia', 'materia_id', 'turma_id');
+    }
+
+    public function tarefas()
+    {
+        return $this->hasMany(Tarefa::class);
     }
 }

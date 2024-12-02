@@ -29,9 +29,9 @@ class AlunoFactory extends Factory
             'nome' => $this->faker->name(),
             'telefone' => $this->faker->phoneNumber(),
             'dt_nascimento' => $this->faker->date('Y-m-d', '2010-01-01'),
-/*             'curso' => $this->faker->word,
-            'modulo' => $this->faker->word,
-            'turma' => $this->faker->word, */
+            'rg' => $this->faker->word,
+            'cpf' => $this->faker->word,
+            'endereco' => $this->faker->address,
             'foto' => $imageBlob,
             'password' => bcrypt('aluno123'), // Senha padrão criptografada
         ];

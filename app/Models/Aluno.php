@@ -20,15 +20,15 @@ class Aluno extends Authenticatable
 
     protected $fillable = [
         'rm',
+        'rg',
+        'cpf',
+        'endereco',
         'codigo_etec',
         'nome',
         'telefone',
         'dt_nascimento',
-/*         'curso',
-        'modulo',
-        'turma', */
         'password',
-        'foto'
+        'foto',
     ];
 
     /**
@@ -42,11 +42,11 @@ class Aluno extends Authenticatable
         'remember_token',
     ];
 
-    // Relação de muitos para muitos com Responsável
+/*     // Relação de muitos para muitos com Responsável
     public function responsaveis()
     {
         return $this->belongsToMany(Responsavel::class, 'responsavel_aluno');
-    }
+    } */
 
     // Relação de muitos para muitos com Turma
     public function turmas()
@@ -54,7 +54,7 @@ class Aluno extends Authenticatable
         return $this->belongsToMany(Turma::class, 'aluno_turma', 'aluno_id', 'turma_id');
     }
 
-    public function presencas(){
+/*     public function presencas(){
         return $this->hasMany(Presenca::class);
-    }
+    } */
 }

@@ -12,11 +12,17 @@ class Curso extends Model
     protected $fillable = [
         'nome',
         'descricao',
+        'periodos',
+        'modulos',
     ];
 
     // Relação de um para muitos com Turma
     public function turmas()
     {
         return $this->hasMany(Turma::class);
+    }
+
+    public function materias(){
+        return $this->hasMany(Materia::class);
     }
 }

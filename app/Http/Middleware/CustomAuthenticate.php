@@ -22,7 +22,7 @@ class CustomAuthenticate
             $route = match ($guard) {
                 'professor' => route('professor.login'),
                 'aluno' => route('aluno.login'),
-                'gestor' => route('gestor.login'),
+                'gestor' => route('gestao.login'),
                 default => route('login'), // Página geral de login
             };
 

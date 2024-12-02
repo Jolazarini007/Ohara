@@ -136,6 +136,12 @@ main {
     word-wrap: break-word;
 }
 
+
+.aulasProf .aulas .aula a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .calendarioAluno {

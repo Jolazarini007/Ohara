@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-    @include('professor.layouts.sidebar')
+        @include('professor.layouts.sidebar')
 
 
         <main>
@@ -19,9 +19,9 @@
             <div class="dadosAluno">
                 <div class="container">
                     <div class="imgAluno">
-                            <div class='frame'>
-                                <img src="data:image/jpeg;base64,{{ base64_encode($professor->foto) }}" alt="Imagem não encontrada">         
-                            </div>
+                        <div class='frame'>
+                            <img src="data:image/jpeg;base64,{{ base64_encode($professor->foto) }}" alt="Imagem não encontrada">
+                        </div>
                     </div>
                     <div class="info">
                         <h3>Professor:</h3>
@@ -32,20 +32,18 @@
 
             <div class="aulasProf">
                 <div class="aulas">
-                  
 
+                    @forelse ($professor->turmas as $turma)
                     <div class="aula">
-                        <h4>Proxima Aula</h4>
-                        <p>Sala 3</p>
-                        <p>Etec Juscelino Kubitschek</p>
+                        <a href="{{ route('professor.turma', $turma->id) }}">
+                            <p>
+                                {{ $turma->nome }} 
+                            </p>
+                        </a>
                     </div>
-
-                    <div class="aula">
-                        <h4>Proxima Aula</h4>
-                        <p>Sala 5</p>
-                        <p>Etec Juscelino Kubitschek</p>
-                    </div>
-
+                    @empty
+                    <div class="aula">Este professor ainda não está associado a nenhuma turma.</div>
+                    @endforelse
                 </div>
             </div>
 

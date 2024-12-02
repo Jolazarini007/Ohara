@@ -21,14 +21,18 @@
                     <a href="#">Atrasadas</a>                
                 </div>
             </div>
-
+            @foreach ($tarefas as $tarefa)
+                
             <div id="areaAtvs">
                 <div id="atv">
-                    <p id="materiaAtv">Matéria</p>
-                    <p id="dataAtv">22/09/2024</p>
+                    <p id="materiaAtv">{{ $tarefa->materia->nome }}</p>
+                    <p id="dataAtv">{{ $tarefa->data_entrega }}</p>
+                    <p> {{ $tarefa->titulo }}</p>
+                    <p> {{ $tarefa->professor->nome }}</p>
                     <button type="button" class="botao" id="anexarAtv">Visualizar Atividade</button>
                 </div>
             </div>
+            @endforeach
 
         </main>
 

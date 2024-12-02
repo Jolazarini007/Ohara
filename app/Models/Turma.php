@@ -12,8 +12,8 @@ class Turma extends Model
     protected $fillable = [
         'nome',
         'descricao',
-        'curso_id',
-        'periodo_id',
+        'tipo',
+        'curso_id'
     ];
 
     // Relação de muitos para muitos com Aluno
@@ -23,38 +23,33 @@ class Turma extends Model
     }
 
 
-    public function materias()
+     public function materias()
     {
         return $this->belongsToMany(Materia::class, 'turma_materia', 'turma_id', 'materia_id');
-    }
-
+    } 
+/* 
     // Relação com a tabela intermediária (turma_materia)
     public function turmaMaterias()
     {
         return $this->hasMany(TurmaMateria::class);
-    }
+    } */
 
-    // Relação 1:N: uma turma pode ter várias presenças registradas
+/*     // Relação 1:N: uma turma pode ter várias presenças registradas
     public function presencas()
     {
         return $this->hasMany(Presenca::class);
-    }
-
-    /*     // Relação de um para muitos com Curso
-    public function curso()
-    {
-        return $this->belongsTo(Curso::class);
-    }
- */
-    /*     // Relação de um para muitos com Periodo
-    public function periodo()
-    {
-        return $this->belongsTo(Periodo::class);
     } */
-
-    /*     // Relação de muitos para muitos com Professor
     public function professores()
     {
-        return $this->belongsToMany(Professor::class, 'professor_turma');
-    } */
+        return $this->belongsToMany(Professor::class, 'professor_turma', 'turma_id', 'professor_id');
+    }
+
+    public function tarefas()
+    {
+        return $this->hasMany(Tarefa::class);
+    }
+
+    public function curso(){
+        return $this->belongsTo(Curso::class);
+    }
 }

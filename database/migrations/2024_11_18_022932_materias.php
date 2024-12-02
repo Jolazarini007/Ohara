@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id(); // ID principal
             $table->string('nome'); // Nome da matéria
             $table->string('descricao')->nullable(); // Descrição da matéria
+            $table->foreignId('curso_id')->constrained('cursos')->onDelete('cascade'); // FK para curso
             $table->timestamps(); // Created_at e Updated_at
         });
     }

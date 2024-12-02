@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfessorInfoController extends Controller
 {
-/*     public function dados(){
+     public function dados(){
         
-        $aluno = Auth::guard('professor')->user();
+        $professor = Auth::guard('professor')->user();
 
-        return view('professor.dadosAluno', ['aluno' => $aluno]);
-    } */
+        return view('professor.dados', ['professor' => $professor]);
+    } 
 
     public function home(){
         $professor = Auth::guard('professor')->user();

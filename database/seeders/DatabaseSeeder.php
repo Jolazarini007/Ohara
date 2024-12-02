@@ -10,16 +10,16 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             ResponsavelSeeder::class,
-            AlunoSeeder::class,
+            /* AlunoSeeder::class, */
             CursoSeeder::class,
             ProfessorSeeder::class,
-            MateriaSeeder::class,
+            /* MateriaSeeder::class, */
             PeriodoSeeder::class,
             TurmaSeeder::class,
             SemestreSeeder::class,
             AnoLetivoSeeder::class,
             GestorSeeder::class,
-            TesteRelacionamentosSeeder::class,
+            /* TesteRelacionamentosSeeder::class, */
         ]);
     }
 }

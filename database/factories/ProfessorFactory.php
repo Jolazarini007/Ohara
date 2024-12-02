@@ -27,6 +27,8 @@ class ProfessorFactory extends Factory
             'rm'  => $this->faker->unique()->randomNumber(6, true), // RM com 6 dígitos
             'codigo_etec' => $this->faker->unique()->randomNumber(6, true), // Código Etec com 10 caracteres aleatórios
             'nome' => $this->faker->name,
+            'rg' => $this->faker->word,
+            'cpf' => $this->faker->word,
             'telefone' => $this->faker->phoneNumber,
             'dt_nascimento' => $this->faker->date('Y-m-d', '2010-01-01'),
             'endereco' => $this->faker->address,

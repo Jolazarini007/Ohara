@@ -14,17 +14,23 @@ class Tarefa extends Model
         'descricao',
         'data_entrega',
         'professor_id',
-        'turma_materia_id',
+        'turma_id',
+        'materia_id',
     ];
 
 
-    public function turmaMateria()
-    {
-        return $this->belongsTo(TurmaMateria::class, 'turma_materia_id');
-    }
-
     public function professor()
     {
-        return $this->belongsTo(Professor::class, 'professor_id');
+        return $this->belongsTo(Professor::class);
+    }
+
+    public function turma()
+    {
+        return $this->belongsTo(Turma::class);
+    }
+    
+    public function materia()
+    {
+        return $this->belongsTo(Materia::class);
     }
 }
