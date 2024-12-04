@@ -55,17 +55,17 @@
         </div>
 
         <div>
-                        <label for="turmas">Turmas</label>
-                        <select name="turmas[]" id="turmas" multiple="multiple" required>
-                            @foreach ($turmas as $turma)
-                            <option value="{{ $turma->id }}" {{ in_array($turma->id, old('turma', [])) ? ' ' : '' }}>
-                                {{ $turma->nome }}
-                            </option>
-                            @endforeach
-                        </select>
-                        @error('turmas') <span style="color: red">{{ $message }}</span> @enderror
-                        @error('turmas.*') <span style="color: red">{{ $message }}</span> @enderror
-                    </div>
+            <label for="turmas">Turmas</label>
+            <select name="turmas[]" id="turmas" multiple="multiple" required>
+                @foreach ($turmas as $turma)
+                <option value="{{ $turma->id }}" {{ in_array($turma->id, old('turma', [])) ? ' ' : '' }}>
+                    {{ $turma->nome }}
+                </option>
+                @endforeach
+            </select>
+            @error('turmas') <span style="color: red">{{ $message }}</span> @enderror
+            @error('turmas.*') <span style="color: red">{{ $message }}</span> @enderror
+        </div>
 
         <div>
             <label for="telefone">Telefone:</label><br>
