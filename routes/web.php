@@ -77,6 +77,10 @@ Route::prefix('professor')->middleware([CustomAuthenticate::class . ':professor'
     Route::get('presenca', fn() => view('professor.listPresenca'))->name('professor.presenca');
     Route::get('turma/{turmaId}', [ProfessorTurmaController::class, 'index'])->name('professor.turma');
 
+
+    Route::get('suporte', fn() => view('gestao.suporte'))->name('gestao.suporte');
+    Route::get('suporte2', fn() => view('aluno.suporte2'))->name('gestao.suporte2');
+
     Route::get('turma/{turmaId}/tarefas/criar', [ProfessorTurmaController::class, 'create'])->name('professor.turma.tarefas.create');
     Route::post('turma/{turmaId}/tarefas/store', [ProfessorTurmaController::class, 'store'])->name('professor.turma.tarefas.store');
 });
