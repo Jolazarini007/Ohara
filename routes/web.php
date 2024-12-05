@@ -87,8 +87,7 @@ Route::prefix('aluno')->middleware([CustomAuthenticate::class . ':aluno'])->grou
     Route::get('Home', [AlunoInfoController::class, 'home'])->name('aluno.home');
     Route::get('dados', [AlunoInfoController::class, 'dados'])->name('aluno.dados');
     Route::get('atividades', [AlunoTarefaController::class, 'tarefas'])->name('aluno.atividades');
-    Route::get('notas-e-faltas', fn() => view('aluno.notasFaltas'))->name('aluno.notas');
-    Route::get('boletim', fn() => view('aluno.home'))->name('aluno.boletim');
+    Route::get('notas-e-faltas', fn() => view('aluno.notasFaltas'))->name('aluno.boletim');
     Route::get('declaracoes', fn() => view('aluno.reclamacoes'))->name('aluno.reclamacoes');
     Route::get('consulta', fn() => view('aluno.consulDeProtocol'))->name('aluno.consulta');
     Route::get('suporte', fn() => view('aluno.suporte'))->name('aluno.suporte');
