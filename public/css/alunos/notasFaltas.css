@@ -59,14 +59,17 @@ main > p{
 }
 
 main > p > a{
+    color: rgb(37, 37, 37);
     text-decoration: none;
-    color: black;
-    font-weight: 800;
+    font-size: 1em;
+    margin: 0px 20px ;
+    font-weight: 500;
 }
 
 main > p > a:hover{
-    color: rgb(31, 31, 31);
     text-decoration: underline;
+    font-weight: 800;
+    font-size: 1.2em;
 }
 
 

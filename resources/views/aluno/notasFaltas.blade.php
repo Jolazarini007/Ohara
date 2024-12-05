@@ -43,7 +43,7 @@
                 </table>
 
             </div>
-            <p>Há algum engano nas notas ou faltas? Reclame aqui &RightArrow;  <a href="{{ route('aluno.reclamacoes') }}">Reclamações</a></p>
+            <p>Há algum engano nas notas ou faltas? Reclame aqui &RightArrow;  <a class="link" href="{{ route('aluno.reclamacoes') }}">Reclamações</a></p>
         </main>
     </div>
 </body>

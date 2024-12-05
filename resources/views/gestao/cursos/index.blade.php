@@ -27,7 +27,7 @@
                             <th>Nome</th>
                             <th>Descrição</th>
                             <th>Matérias</th>
-                            <th>Adicionar turma</th>
+                            <th colspan="2">Adicionar turma</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,10 +41,10 @@
                                 @endforeach
                             </td>
                             <td>
-                                <a href="{{ route('gestao.cursos.edit', $curso->id) }}">Editar</a>
+                                <a class="link" href="{{ route('gestao.cursos.edit', $curso->id) }}">Editar</a>
                             </td>
                             <td>
-                                <a href="{{ route('gestao.turmas.create', $curso->id) }}">+</a>
+                                <a class="link" href="{{ route('gestao.turmas.create', $curso->id) }}">+</a>
                             </td>
                         </tr>
                         @endforeach
@@ -52,7 +52,7 @@
                     <tfoot>
                         <tr>
                             <td colspan="5">
-                                <a class="botao" href="{{ route('gestao.cursos.create') }}">Adicionar Curso</a>
+                                <a class="link" href="{{ route('gestao.cursos.create') }}">Adicionar Curso</a>
                             </td>
                         </tr>
                     </tfoot>

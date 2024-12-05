@@ -95,9 +95,9 @@ button#btConfig:hover{
 div#ftAluno{
     border-radius: 100%;
     background-color: black;
-    width: 65%;
-    height: 60%;
-    margin: 10px auto 10px auto;
+    width: 75%;
+    height: 70%;
+    margin: 50px auto ;
 }
 
 div#ftAluno img{

@@ -37,14 +37,14 @@
                         <tr>
                             <td>{{ $turma->nome }}</td>
                             <td>
-                                <a href="{{ route('gestao.editarTurmaview', $turma->id) }}">Editar</a>
+                                <a class="link" href="{{ route('gestao.editarTurmaview', $turma->id) }}">Editar</a>
                             </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
 
-                <a href="{{ route('gestao.adicionarTurmaview') }}">Criar Nova Turma</a>
+                <a class="link" href="{{ route('gestao.adicionarTurmaview') }}">Criar Nova Turma</a>
 
         </main>
 
