@@ -15,9 +15,13 @@ class AlunoInfoController extends Controller
     }
 
     public function home(){
+        $tarefas = Auth::guard('aluno')->user()->turmas->flatMap(function ($turma) {
+            return $turma->tarefas;
+        });
         $aluno = Auth::guard('aluno')->user();
 
-        return view('aluno.home', ['aluno' => $aluno]);
+        return view('aluno.home', ['aluno' => $aluno, 'tarefas' => $tarefas]);
 
     }
+
 }

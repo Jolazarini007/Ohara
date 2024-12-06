@@ -50,12 +50,28 @@
                 <a href="{{ route('professor.turma.tarefas.create', $turma->id) }}" class="botao">Tarefas</a>
             </div>
 
-                <div id="infosAluno">
-                    <h2>Aluno</h2>
-                    <div id="ftChamada"></div>
-                    <h4>Nome:</h4>
-                    <p>Kaua Pereira de Andrade</p>
+            <div id="infosAluno">
+                <h2>Aluno</h2>
+                <div class="imgAluno" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+">
+                    <div class="iframe" style="    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    border: 1px solid black;
+    overflow: hidden;">
+
+                        <img src="data:image/jpeg;base64,{{ base64_encode($aluno->foto) }}" alt="Imagem não encontrada" style="    width: 100%;
+    height: 100%;
+    border-radius: 50%;">
+                    </div>
                 </div>
+                <h4>Nome:</h4>
+                <p>{{ $aluno->nome }}</p>
+            </div>
 
         </main>
     </div>

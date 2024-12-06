@@ -25,7 +25,6 @@
                     <th>RM</th>
                     <th>Nome</th>
                     <th>Faltas</th>
-                    <th>Frequência do Dia</th>
                 </tr>
             </thead>
             
@@ -33,8 +32,42 @@
                 <tr>
                     <td>32133</td>
                     <td>kaua pereira</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>11111</td>
+                    <td>João Victor Lazarini</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>22222</td>
+                    <td>Sofia Ananias Lopes</td>
                     <td>3</td>
-                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>23451</td>
+                    <td>Marco Andreik Silva</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>67845</td>
+                    <td>Gabriel Pereira</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>98756</td>
+                    <td>Gabriel Oliveira</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>56709</td>
+                    <td>Fabio Orcus</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>23465</td>
+                    <td>Thiago Felix</td>
+                    <td>0</td>
                 </tr>
             </tbody>
         </table>
@@ -42,7 +75,7 @@
             <h2>Aluno</h2>
             <div id="ftChamada"></div>
             <h4>Nome:</h4>
-            <p>Kaua Pereira de Andrade</p>
+            <p>Kaua Pereira</p>
         </div>
     </main>
 </div>

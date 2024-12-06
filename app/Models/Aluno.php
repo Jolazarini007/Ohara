@@ -54,7 +54,7 @@ class Aluno extends Authenticatable
         return $this->belongsToMany(Turma::class, 'aluno_turma', 'aluno_id', 'turma_id');
     }
 
-/*     public function presencas(){
+    public function presencas(){
         return $this->hasMany(Presenca::class);
-    } */
+    } 
 }

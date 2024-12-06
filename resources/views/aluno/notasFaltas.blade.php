@@ -29,14 +29,29 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Matemática</td>
-                            <td>8.5</td>
-                            <td>2</td>
+                            <td>Desenvolvimento de Sistemas</td>
+                            <td>0</td>
+                            <td>0</td>
                         </tr>
                         <tr>
-                            <td>História</td>
-                            <td>7.0</td>
-                            <td>1</td>
+                            <td>Desenvolvimento de Aplicativos</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Redes e protocolos</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Desenvolvimento Web</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Banco de Dados</td>
+                            <td>0</td>
+                            <td>0</td>
                         </tr>
                         <!-- Adicione mais linhas conforme necessário -->
                     </tbody>

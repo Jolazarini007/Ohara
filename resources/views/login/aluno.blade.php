@@ -62,8 +62,7 @@
 
             <!-- Links de Ação -->
             <div class="etc">
-                <a href="{{ route('password.request') }}">Esqueci minha senha</a>
-                <a href="{{ route('register') }}">Fazer cadastro</a>
+                <a href="{{ route('login') }}">Seleção de Login</a>
             </div>
         </div>
     </main>

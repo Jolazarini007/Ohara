@@ -10,7 +10,13 @@ class Presenca extends Model
         return $this->belongsTo(Aluno::class);
     }
 
-    public function turmaMateria(){
-        return $this->belongsTo(TurmaMateria::class, 'turma_materia_id');
+    public function turma()
+    {
+        return $this->belongsTo(Turma::class);
+    }
+    
+    public function materia()
+    {
+        return $this->belongsTo(Materia::class);
     }
 }

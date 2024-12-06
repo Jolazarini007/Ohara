@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('presencas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('aluno_id')->constrained('alunos')->onDelete('cascade');
-            $table->foreignId('turma_materia_id')->constrained('turma_materia')->onDelete('cascade');
+            $table->foreignId('materia_id')->constrained('materias')->onDelete('cascade');
+            $table->foreignId('turma_id')->constrained('turmas')->onDelete('cascade');
             $table->boolean('presente');
+
             $table->timestamps();
         });
     }

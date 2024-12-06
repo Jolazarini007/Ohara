@@ -112,37 +112,15 @@
                     <h2>Tarefas</h2>
                 </div>
                 <div class="tarefas">
+                    @forelse ($tarefas as $tarefa)
+
                     <div>
-                        <p>01 | PWI3</p>
+                        <p> {{ $tarefa->titulo }}</p>
                     </div>
-                    <div>
-                        <p>02 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>03 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>04 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>05 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>07 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>08 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>09 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>10 | PWI3</p>
-                    </div>
-                    <div>
-                        <p>11 | PWI3</p>
-                        </span>
-                    </div>
+                    @empty
+                    <p>Você não tem atividades pendentes</p>
+                    @endforelse
+
                 </div>
 
         </main>

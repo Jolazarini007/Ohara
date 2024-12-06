@@ -16,7 +16,7 @@
 
         <main>
 
-            <h1>Consulte Seu protocolo</h1>
+            <h1>Consulte seu protocolo</h1>
 
             <form action="#" method="get">
                 <div>
@@ -25,18 +25,18 @@
                 </div>
                 <input type="button" value="Consultar" class="btproto">
 
-                <div id="res">
-                    Nessa div deve retornar o estado do protocolo
-                </div>
+<!--                 <div id="res">
+                    estado do protocolo
+                </div> -->
 
-                <div>
+<!--                 <div>
                     <label for="solIN">Solicitação do Declaração</label> <br>
                     <select name="solIN" id="solIN" required>
                         <option value="opcao1">opcao1</option>
                         <option value="opcao2">opcao2</option>
                         <option value="opcao3">opcao3</option>
                     </select>
-                </div>
+                </div> -->
 
                 <div>
                     <label for="finIN">Para qual finalidade será a declaração?</label> <br>

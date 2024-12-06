@@ -35,7 +35,7 @@
                     <textarea name="txtrecla" id="txtrecla" cols="35" rows="10" placeholder="Eu acho minha nota injusta pois..." required spellcheck="true"></textarea>
                 </div>
 
-                <input type="button" value="Enviar" id="btrecla">
+                <input type="button" value="Enviar" id="btrecla" onclick="alert('Sua reclamação foi enviada com sucesso, aguarde a resposta da secretária!');">
             </form>
         </main>
     </div>
