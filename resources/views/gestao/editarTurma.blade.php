@@ -23,8 +23,8 @@
 
         @include('gestao.layouts.sidebar')
 
-        <div class="container">
-            <h2>Editar Turma: {{ $turma->nome }}</h2>
+        <div class="container" style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center;">
+            <h2 >Editar Turma: {{ $turma->nome }}</h2>
 
             @if(session('success'))
             <div class="alert alert-success">
@@ -33,7 +33,7 @@
             @endif
 
 
-            <form action="{{ route('gestao.editarTurma', $turma->id) }}" method="POST">
+            <form action="{{ route('gestao.editarTurma', $turma->id) }}" method="POST" style="width: 80%; height: 100%; display: flex; flex-direction: column; justify-content:space-evenly;">
                 @csrf
                 @method('PUT')
 

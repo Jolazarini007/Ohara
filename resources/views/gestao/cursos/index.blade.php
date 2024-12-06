@@ -14,7 +14,7 @@
 
         @include('gestao.layouts.sidebar')
 
-        <main>
+        <main style="display: flex; align-items: center;">
 
             <h1>Lista de Cursos</h1>
 
